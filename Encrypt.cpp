@@ -17,12 +17,3 @@ void Encrypt::read() {
 void Encrypt::write() {
 
 }
-
-void Encrypt::encode() {
-
-}
-
-void Encrypt::decode() {
-
-}
-

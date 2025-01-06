@@ -10,4 +10,7 @@ private:
 public:
     Enigma();
     
+    void encode() override;
+	void decode() override;
+
 };

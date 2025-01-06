@@ -8,14 +8,15 @@ protected:
 
 public:
 	Encrypt();
+    virtual ~Encrypt() = default;
 
 	std::string& getPlain();
 	std::string& getCipher();
 
 	void read();
 	void write();
-    
-	void encode();
-	void decode();
+
+	virtual void  encode() = 0;
+	virtual void decode() = 0;
 
 };
