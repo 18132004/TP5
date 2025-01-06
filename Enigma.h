@@ -3,9 +3,13 @@
 
 class Enigma : public Encrypt {
 private:
-    std::string rotorKey1;
-    std::string rotorKey2;
-    std::string rotorKey3;
+    std::string letters = "abcdefghijklmnopqrstuvwxyz";
+    int rotor1 = 0;
+    int rotor2 = 0;
+    int rotor3 = 0;
+
+    void turnRotors();
+    int getLetterId();
 
 public:
     Enigma();
