@@ -13,8 +13,8 @@ public:
 	std::string& getPlain();
 	std::string& getCipher();
 
-	void read();
-	void write();
+	void read(const std::string& filename);
+	void write(const std::string& filename);
 
 	virtual void encode() = 0;
 	virtual void decode() = 0;
