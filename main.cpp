@@ -1,5 +1,5 @@
 #include <iostream>
-#include <Encrypt.h>
+#include <Enigma.h>
 
 int main() {
 

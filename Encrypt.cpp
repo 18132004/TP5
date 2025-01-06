@@ -31,12 +31,3 @@ void Encrypt::write(const std::string& filename) {
         std::cerr << "Unable to open file: " << filename << std::endl;
     }
 }
-
-void Encrypt::encode() {
-
-}
-
-void Encrypt::decode() {
-
-}
-
