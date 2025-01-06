@@ -12,8 +12,8 @@ public:
 	std::string& getPlain();
 	std::string& getCipher();
 
-	void read();
-	void write();
+	void read(const std::string& filename);
+	void write(const std::string& filename);
     
 	void encode();
 	void decode();
