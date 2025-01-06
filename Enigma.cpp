@@ -28,7 +28,7 @@ void Enigma::encode() {
     const int messageSize = plain.size();
     for (int i = 0; i < messageSize; i++) {
         int letterId = getLetterId(plain[i]);
-        cipher[i] = letters[letterId + rotor1];
+        cipher[i] = letters[(letterId + rotor1) % 26];
         turnRotors();
     }
 }
@@ -37,7 +37,7 @@ void Enigma::decode() {
     const int messageSize = cipher.size();
     for (int i = 0; i < messageSize; i++) {
         int letterId = getLetterId(cipher[i]);
-        plain[i] = letters[letterId - rotor1];
+        plain[i] = letters[(letterId - rotor1) % 26];
         turnRotors();
     }
 }
