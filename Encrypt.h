@@ -3,8 +3,8 @@
 
 class Encrypt {
 protected:
-	std::string plain;
-	std::string cipher;
+	std::string plain = "je suis";
+	std::string cipher = "je suis";
 
 public:
 	Encrypt();
@@ -16,7 +16,7 @@ public:
 	void read();
 	void write();
 
-	virtual void  encode() = 0;
+	virtual void encode() = 0;
 	virtual void decode() = 0;
 
 };

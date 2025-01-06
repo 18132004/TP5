@@ -1,4 +1,5 @@
 #include "Enigma.h"
+#include <iostream>
 
 Enigma::Enigma() : Encrypt() {
 
@@ -12,29 +13,30 @@ void Enigma::turnRotors() {
     }
     if (rotor2 > 25) {
         rotor2 = 0;
-        rotor3++;
-    }
-    if (rotor3 > 25) {
-        rotor3 = 0;
     }
 }
 
-int getLetterId(std::string message) {
+int Enigma::getLetterId(const char& l) {
     for (int i = 0; i < 26; i++) {
-        if ()
+        if (l == letters[i]) {
+            return i;
+        }
     }
-    return i
 }
 
 void Enigma::encode() {
     const int messageSize = plain.size();
     for (int i = 0; i < messageSize; i++) {
-        std::string l = getLetterId(plain);
-        plain[i] = letters[rotor1];
+        int letterId = getLetterId(plain[i]);
+        cipher[i] = letters[letterId + rotor1];
         turnRotors();
     }
 }
 
 void Enigma::decode() {
 
+}
+
+void Enigma::displayMessage() {
+    std::cout << "Cipher: " << cipher << std::endl;
 }
