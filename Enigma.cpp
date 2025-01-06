@@ -43,5 +43,6 @@ void Enigma::decode() {
 }
 
 void Enigma::displayMessage() {
+    std::cout << "Plain: " << plain << std::endl;
     std::cout << "Cipher: " << cipher << std::endl;
 }
