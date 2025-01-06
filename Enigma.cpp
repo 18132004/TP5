@@ -42,7 +42,10 @@ void Enigma::decode() {
     }
 }
 
-void Enigma::displayMessage() {
+void Enigma::displayPlain() {
     std::cout << "Plain: " << plain << std::endl;
+}
+
+void Enigma::displayCipher() {
     std::cout << "Cipher: " << cipher << std::endl;
 }

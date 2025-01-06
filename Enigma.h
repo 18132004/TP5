@@ -18,6 +18,7 @@ public:
     void encode() override;
 	void decode() override;
 
-    void displayMessage();
+    void displayPlain();
+    void displayCipher();
 
 };

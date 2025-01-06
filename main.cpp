@@ -6,7 +6,9 @@ int main() {
 	enigma.read("input.txt");
     enigma.encode();
 	enigma.write("output.txt");
-    enigma.displayMessage();
+    enigma.displayCipher();
+    enigma.decode();
+    enigma.displayCipher();
 
 	return 0;
 }
