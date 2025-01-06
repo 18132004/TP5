@@ -9,12 +9,13 @@ protected:
 public:
 	Encrypt();
 
-	std::string& getPlain() const;
-	std::string& getCipher() const;
-
-	void encode();
-	void decode();
+	std::string& getPlain();
+	std::string& getCipher();
 
 	void read();
 	void write();
+    
+	void encode();
+	void decode();
+
 };
