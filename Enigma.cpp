@@ -34,7 +34,12 @@ void Enigma::encode() {
 }
 
 void Enigma::decode() {
-
+    const int messageSize = cipher.size();
+    for (int i = 0; i < messageSize; i++) {
+        int letterId = getLetterId(cipher[i]);
+        plain[i] = letters[letterId - rotor1];
+        turnRotors();
+    }
 }
 
 void Enigma::displayMessage() {
